@@ -51,9 +51,9 @@ const EmptyStateCard = ({
 )
 
 EmptyStateCard.propTypes = {
-  actionButton: PropTypes.node,
+  actionButton: PropTypes.func,
   actionText: PropTypes.string,
-  icon: PropTypes.node,
+  icon: PropTypes.func,
   onActivate: PropTypes.func,
   text: PropTypes.string,
   title: PropTypes.string,
