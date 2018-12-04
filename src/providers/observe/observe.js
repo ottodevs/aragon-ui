@@ -21,8 +21,8 @@ const observe = (observe, initialState = {}) => Component =>
     componentDidMount() {
       this.subscribe(this.props.observable)
     }
-    componentWillReceiveProps({ observable: nextObservable }) {
-      const { observable } = this.props
+    componentdidUpdate({ observable }) {
+      const { observable: nextObservable } = this.props
       // If a new observable gets passed in, unsubscribe from the old and subscribe to the new
       if (nextObservable !== observable) {
         this.unsubscribe()
