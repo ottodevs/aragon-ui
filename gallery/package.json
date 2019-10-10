@@ -5,7 +5,7 @@
   "dependencies": {
     "@aragon/ui": "file:..",
     "history": "^4.7.2",
-    "markdown-it": "^8.4.0",
+    "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.0.2",
     "prismjs": "^1.8.1",
     "prop-types": "^15.6.1",
