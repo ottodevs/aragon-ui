@@ -5,13 +5,16 @@
   "license": "MIT",
   "scripts": {
     "sync-assets": "mkdir -p dist && rsync -rtu \"$(dirname $(node -p 'require.resolve(\"@aragon/ui\")'))/\" dist/aragon-ui",
-    "start": "npm run sync-assets && parcel index.html"
+    "start": "npm run sync-assets && parcel index.html",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@aragon/ui": "file:..",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "styled-components": "^4.0.2"
+    "styled-components": "^4.0.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -19,5 +22,6 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "parcel-bundler": "^1.10.2"
-  }
+  },
+  "snyk": true
 }
